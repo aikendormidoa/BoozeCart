@@ -1,0 +1,141 @@
+/* Update existing .cart-item to resemble .product-card */
+.cart-item {
+  display: flex;
+  align-items: center;
+  /* Reusing product-card border and shadow for consistency */
+  border: 1.8px solid #ff4b2b;
+  border-radius: 10px;
+  padding: 10px; /* Reduced padding slightly from product-card */
+  text-align: left; /* Align text left within item */
+  transition: box-shadow 0.3s ease;
+  background: white;
+  justify-content: flex-start; /* Align content to the start */
+}
+
+.cart-item:hover {
+  box-shadow: 0 0 10px rgba(255, 75, 43, 0.6);
+}
+
+.cart-item-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 15px; /* Adjust margin for spacing */
+  border: none; /* Remove previous border */
+  border-radius: 5px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Spacing between details */
+}
+
+.cart-item-details h3 {
+  font-size: 1.1rem; /* Consistent with product card h3 */
+  color: #d8341a;
+  margin-bottom: 0; /* Remove previous margin */
+}
+
+.cart-item-details p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0;
+}
+
+/* Quantity Control Buttons - Reusing nav-btn style */
+.quantity-control button {
+  background-color: #ff4b2b; /* primary button color */
+  color: white;
+  border: none;
+  width: 28px; /* Slightly smaller */
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  transition: background-color 0.25s ease;
+  padding: 0; /* Remove padding from general button rule */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity-control button:hover {
+  background-color: #d8341a;
+}
+
+/* Remove button - Reusing nav-btn style, but with red color */
+.remove-from-cart-btn {
+  background-color: #dc3545; /* Red color for remove */
+  color: white;
+  border: none;
+  padding: 6px 12px; /* Consistent with nav-btn padding */
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85em; /* Consistent with nav-btn font size */
+  transition: background-color 0.25s ease;
+  margin-top: 10px;
+  width: fit-content; /* Adjust width to content */
+}
+
+.remove-from-cart-btn:hover {
+  background-color: #c82333;
+}
+
+/* Cart Actions Container for buttons at the bottom */
+.cart-actions {
+  display: flex;
+  justify-content: space-between; /* Space out buttons */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Continue Shopping Button - Reusing nav-btn style */
+.continue-shopping-btn {
+  /* Inherits most styles from .nav-btn */
+  text-decoration: none; /* Ensure it looks like a button, not just a link */
+  display: inline-flex; /* To apply padding correctly */
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px; /* Matches add-to-cart-btn padding */
+  font-size: 1em; /* Make it slightly larger */
+}
+
+/* Checkout Button - Reusing add-to-cart-btn style */
+.cart-summary #checkoutBtn {
+  margin-top: 0; /* Remove previous margin-top */
+  padding: 10px 14px; /* Consistent with add-to-cart-btn */
+  font-size: 1em; /* Make it slightly larger */
+  width: auto;
+}
+
+
+/* Responsive adjustments for cart.html */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center; /* Center items when stacked */
+  }
+  .cart-item-img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .cart-item-details {
+    align-items: center; /* Center details when stacked */
+  }
+  .cart-summary {
+    text-align: center;
+  }
+  .cart-actions {
+    flex-direction: column; /* Stack buttons on small screens */
+    align-items: center; /* Center stacked buttons */
+  }
+  .cart-actions .nav-btn,
+  .cart-actions .add-to-cart-btn {
+    width: 80%; /* Make buttons wider when stacked */
+    max-width: 250px;
+  }
+}

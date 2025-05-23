@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BoozeCart</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+  <header>
+    <img src="./image/logo.img.png" alt="BoozeCart Logo" class="logo">
+    <h1>BoozeCart</h1>
+    <nav class="main-nav">
+        <a href="./index.html" class="nav-btn">Home</a>
+      <a href="./pages/settings.html" class="nav-btn settings-btn" title="Adjust application settings">Settings</a>
+      <a href="./pages/profile.html" class="nav-btn profile-btn" title="Manage your user profile">Profile</a>
+      <a href="./pages/cart.html" class="nav-btn cart-btn" title="View items in your shopping cart">View Cart (<span id="cart-count">0</span>)</a>
+      <a href="./pages/login.html" class="nav-btn">Logout</a>
+    </nav>
+  </header>
+
+  <div class="filter-search-container">
+    <input type="text" id="searchInput" placeholder="Search drinks..." />
+    <div class="category-filters">
+      <button class="filter-btn active" data-category="All">All</button>
+      <button class="filter-btn" data-category="Beer">Beer</button>
+      <button class="filter-btn" data-category="Rum">Rum</button>
+      <button class="filter-btn" data-category="Gin">Gin</button>
+      <button class="filter-btn" data-category="Whiskey">Whiskey</button>
+      <button class="filter-btn" data-category="Brandy">Brandy</button>
+      <button class="filter-btn" data-category="Others">Others</button>
+    </div>
+  </div>
+
+  <main>
+    <div id="productsContainer" class="products-container">
+      </div>
+  </main>
+
+  <script src="./script/products.js"></script>
+    <script>
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+</body>
+</html>

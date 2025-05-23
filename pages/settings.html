@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings - BoozeCart</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <header>
+    <img src="../image/logo.img.png" alt="Aiken Liquor Shop Logo" class="logo">
+    <h1>BoozeCart</h1>
+    <nav class="main-nav">
+      <a href="../index.html" class="nav-btn">Home</a>
+      <a href="cart.html" class="nav-btn">View Cart</a>
+      <a href="settings.html" class="nav-btn settings-btn" title="Adjust application settings">Settings</a>
+      <a href="profile.html" class="nav-btn profile-btn" title="Manage your user profile">Profile</a>
+      <a href="login.html" class="nav-btn">Logout</a>
+    </nav>
+  </header>
+  <main class="settings-main">
+    <h2>Settings</h2>
+    <form id="settingsForm" class="settings-form">
+      <label>
+        <span>Dark Mode</span>
+        <input type="checkbox" id="darkModeToggle" />
+      </label>
+      <label>
+        <span>Receive Email Updates</span>
+        <input type="checkbox" id="emailUpdatesToggle" />
+      </label>
+      <button type="submit" class="add-to-cart-btn">Save Settings</button>
+    </form>
+  </main>
+  <script src="../script/settings.js"></script>
+</body>
+</html>
